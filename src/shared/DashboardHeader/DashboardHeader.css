@@ -1,0 +1,6 @@
+.btn-toggle .bi-arrow-right {
+    transition: 0.5s;
+}
+.btn-toggle[aria-expanded="true"] .bi-arrow-right {
+    transform: rotate(90deg);
+}

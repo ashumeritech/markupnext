@@ -1,0 +1,51 @@
+header {
+    .navbar {
+        background-color: var(--white);
+        border-bottom: 1px solid var(--border-secondary);
+        padding: 5px 0;
+
+        .header-search {
+            width: 60%;
+        }
+
+        .navbar-brand {
+            img {
+                max-width: 170px;
+            }
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 120px;
+    }
+
+    header {
+        padding-top: 0;
+
+        .navbar {
+            .header-search {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .navbar-toggler {
+                position: absolute;
+                right: 0px;
+                top: 7px;
+            }
+        }
+    }
+
+}

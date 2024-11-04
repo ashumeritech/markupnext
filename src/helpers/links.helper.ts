@@ -1,0 +1,1 @@
+export const getTrimmedName = (name: string) => name.trim().toLowerCase().replace(/\s/g, '-');

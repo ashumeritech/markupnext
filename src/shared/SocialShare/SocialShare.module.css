@@ -1,0 +1,9 @@
+.sharing-btns .dropdown-item {
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x) !important;
+}
+
+.sharing-btns .dropdown-item:focus,
+.sharing-btns .dropdown-item:hover {
+    color: var(--bs-dropdown-link-hover-color) !important;
+    background-color: var(--bs-dropdown-link-hover-bg) !important;
+}

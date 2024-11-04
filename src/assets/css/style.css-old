@@ -1,0 +1,54 @@
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f9f9f9;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+
+.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: none;
+}
+.accordion-button:focus {
+    border-color: #86b7fe;
+    box-shadow: none;
+}
+a {
+    text-decoration: none;
+    color: #212529;
+}
+.errorMessage {
+    font-size: 14px;
+    float: right;
+}
+
+
+
+
+
+
+
+aside#left-sidebar {
+    width: 220px;
+}

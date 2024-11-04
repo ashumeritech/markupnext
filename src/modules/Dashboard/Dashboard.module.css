@@ -1,0 +1,25 @@
+#dashboard-left-sidebar {
+    width: 220px;
+    position: fixed;
+    left: 0px;
+    top: 55px;
+    padding: 15px 0 10px;
+}
+
+#dashboard-left-sidebar ul {
+    height: calc(100vh - 85px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#dashboard-left-sidebar ul ul {
+    height: auto;
+}
+
+#dashboard aside .nav-item a {
+    display: flex;
+    font-size: 16px;
+    padding: 5px 0px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
