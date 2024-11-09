@@ -1,20 +1,21 @@
-import { useCallback, useEffect, useState } from 'react';
+"use client"
+import Image from 'next/image';
+import { useCallback, useState } from 'react';
 import Logo from '../../assets/Images/markuptag-logo-4.png';
+import { initialPageLimit } from '../../constants/pageLimitOptions.constant';
 import { useStore } from '../../contexts/StoreProvider';
 import SearchField from '../SearchField/SearchField';
-import './Header.module.css';
-import { initialPageLimit } from '../../constants/pageLimitOptions.constant';
-import Image from 'next/image';
+// import './Header.module.css';
 const Header = () => {
 
-    const {postsStore}=useStore();
-    const {getAllPosts,setCurrentPageInfo}=postsStore;
-const [searchText,setSearchText]=useState('');
-    const CallGetAllPostApi=()=>useCallback(()=>{
-        getAllPosts(1,initialPageLimit,searchText);
-    },[getAllPosts]);
+    const { postsStore } = useStore();
+    const { getAllPosts, setCurrentPageInfo } = postsStore;
+    const [searchText, setSearchText] = useState('');
+    const CallGetAllPostApi = () => useCallback(() => {
+        getAllPosts(1, initialPageLimit, searchText);
+    }, [getAllPosts]);
 
-    const onSearchTextChanged= (text: string)=> {setCurrentPageInfo(1); getAllPosts(1,initialPageLimit,text)};
+    const onSearchTextChanged = (text: string) => { setCurrentPageInfo(1); getAllPosts(1, initialPageLimit, text) };
 
     return <header>
 

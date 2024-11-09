@@ -1,12 +1,10 @@
-import { NavLink } from "react-router-dom";
-
 
 const PrivacyPolicy = () => {
     return <>
 
         <div className="bg-white p-4 rounded-3">
             <h1 className="mb-3">Privacy Policy</h1>
-            <p>The following all points describe the privacy policy of markuptag, So let's start</p>
+            <p>The following all points describe the privacy policy of markuptag, So let&apos;s start</p>
 
             <ul className="mb-3">
                 <li>We do not collect any personal information from our users.</li>
@@ -18,7 +16,7 @@ const PrivacyPolicy = () => {
             <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at <a href="mailto:markuptag20@gmail.com">markuptag20@gmail.com</a></p>
 
             <h3>Cookies</h3>
-            <p>Like any other website, <b>MarkupTag</b> uses ‘cookies'. These cookies are used to store information including visitors preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users experience by customizing our web page content based on visitors browser type and other information.</p>
+            <p>Like any other website, <b>MarkupTag</b> uses ‘cookies&apos;. These cookies are used to store information including visitors preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users experience by customizing our web page content based on visitors browser type and other information.</p>
 
             <h3>DoubleClick DART Cookie</h3>
             <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their sites on the internet.</p>
@@ -36,13 +34,13 @@ const PrivacyPolicy = () => {
             <p>markuptag Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
             <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers respective websites.</p>
 
-            <h3>Children's Information</h3>
+            <h3>Children&apos;s Information</h3>
             <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and monitor and guide their online activity.</p>
             <p>markuptag does not collect any Personal Identifiable Information from children under the age of 15. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to immediately remove such information from our records.</p>
 
             <h3>Online Privacy Policy Only</h3>
             <p>This privacy policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in markuptag.</p>
-            
+
             <h3>Consent</h3>
             <p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
         </div>

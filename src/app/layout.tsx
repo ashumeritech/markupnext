@@ -1,5 +1,10 @@
+import { StoreProvider } from "@/contexts/StoreProvider";
+import Footer from "@/shared/Footer/Footer";
+import Header from "@/shared/Header/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Suspense } from "react";
+import { Bounce, ToastContainer } from "react-toastify";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -26,7 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Suspense fallback={<div>Loading...</div>}>
+          <StoreProvider>
+            <ToastContainer transition={Bounce} />
+            <Header />
+            {/* <LeftSidebar /> */}
+            {children}
+            <Footer />
+          </StoreProvider>
+        </Suspense>
       </body>
     </html>
   );

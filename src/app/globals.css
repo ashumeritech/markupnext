@@ -1,42 +1,249 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+[data-bs-theme="light"] {
+  --bs-body-bg: #ebedf4;
+  --bs-body-color: #374557;
+  --primary: #065ad8;
+  --light-primary: #e6eefb;
+  --secondary: #374557;
+  --light-secondary: #989898;
+  --dark: #202020;
+  --dark-900: #2c2c2c;
+  --gray: #9aa1aa;
+  --light: #f8f9fa;
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --white: #fff;
+  --info: #0dcaf0;
+  --transparent: transparent;
+  --text-primary: #065ad8;
+  --text-secondary: #374557;
+  --text-light-secondary: #989898;
+  --text-white: #fff;
+  --border-primary: #065ad8;
+  --border-light-primary: #e6eefb;
+  --border-secondary: #ddd;
+  --border-form-field: #e2e2e2;
+  --border-transparent: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  padding-top: 100px;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Scrollbar Style */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f9f9f9;
+  -webkit-appearance: none;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* End Scrollbar Style */
+
+.form-control:focus,
+.accordion-button:focus {
+  border-color: #86b7fe;
+  box-shadow: none;
+}
+
+button {
+  border: none !important;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: #212529;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.errorMessage {
+  font-size: 14px;
+  float: right;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.page-link,
+.list-group-item {
+  background-color: var(--transparent);
+}
+
+#main-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+}
+
+/* Header Search Style */
+.header-search {
+  background-color: var(--primary);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* End Header Search Style */
+
+/* Preview Style */
+.post-preview {
+  background-color: var(--white);
+  border: 1px solid var(--border-secondary);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.post-preview .post-preview-header {
+  background: var(--light-primary);
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.post-preview .post-preview-header .post-title {
+  margin: 0;
+}
+
+.post-preview .post-preview-header .post-title a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-size: 16px;
+  display: block;
+}
+
+.post-preview .post-preview-body {
+  padding: 15px;
+}
+
+.post-preview .post-preview-footer {
+  background: var(--light);
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.post-preview .post-preview-footer .get-code-btn {
+  white-space: nowrap;
+  background-color: var(--light-primary);
+  color: var(--text-primary);
+  margin-left: auto;
+}
+
+.post-preview .sharing-btns {
+  background-color: var(--transparent);
+}
+
+.post-preview .sharing-btns .dropdown-menu {
+  background-color: var(--white);
+}
+
+.post-preview .sharing-btns .btn i {
+  color: var(--secondary);
+}
+
+/* End Preview Style */
+
+/* Table Style */
+.table {
+  background-color: var(--white);
+}
+
+/* End Table Style */
+
+/* Category Tag Content Style */
+.category-tag-content {
+  padding: 10px 15px;
+}
+
+.category-tag-content h1 {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+/* End Category Tag Content Style */
+
+/* Footer Style */
+footer {
+  background: var(--white);
+  padding: 10px 0;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+footer ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer ul li {
+  position: relative;
+}
+
+footer ul li:after {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: var(--light-secondary);
+  display: block;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+}
+
+footer ul li:last-child:after {
+  display: none;
+}
+
+footer ul li a {
+  color: var(--text-secondary);
+}
+
+footer ul li a:hover {
+  color: var(--text-primary);
+}
+
+footer p {
+  margin: 0 auto;
+  display: table;
+}
+
+footer p a {
+  color: var(--text-secondary);
+}
+
+footer p a:hover {
+  color: var(--text-primary);
+}
+
+/* End Footer Style */
